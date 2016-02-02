@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ProjectTwo</string>
     <string name="title_movie_detail">Movie Detail</string>
-    <string name="tmdb_api_key">dd21f839dba3092fb08412d3614b2cd8</string>
+    <string name="tmdb_api_key">xxx</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
