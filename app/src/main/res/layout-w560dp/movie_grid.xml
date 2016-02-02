@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context=".MovieGridActivity">
+
+    <!--
+    This layout is a two-pane layout for the Movies
+    master/detail flow.
+    
+    -->
+
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/movie_grid"
+        android:name="com.example.brandnewpeterson.projecttwo.MovieListFragment"
+        android:layout_width="@dimen/item_width"
+        android:layout_height="match_parent"
+        app:layoutManager="GridLayoutManager"
+        app:spanCount="2"
+        tools:context=".MovieGridActivity"
+        tools:listitem="@layout/movie_grid_content" />
+
+
+        <ScrollView
+            android:id="@+id/movie_detail_container"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent" />
+
+
+</LinearLayout>

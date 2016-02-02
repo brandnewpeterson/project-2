@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.brandnewpeterson.projecttwo.MovieDetailFragment"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:id="@+id/noToolbarDetailsContainer"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@color/colorPrimary"
+            android:id="@+id/posterViewDetailNoToolbar"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:id="@+id/titleViewDetailNoToolbar"
+            android:gravity="bottom" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/detailSynopsisContent"
+        android:padding="@dimen/table_text_padding"
+ />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:id="@+id/detailStatsHeading"
+        android:text="Stats"
+        android:paddingBottom="@dimen/table_text_padding" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/table_text_padding"
+            android:shrinkColumns="1"
+            android:layout_weight="2">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:padding="@dimen/table_text_padding"
+                    android:text="Average Rating: "
+                    android:id="@+id/detailRatingLabel" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/table_text_padding"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/detailRatingContent" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Popularity Rank: "
+                    android:padding="@dimen/table_text_padding"
+
+                    android:id="@+id/detailPopularityLabel" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:padding="@dimen/table_text_padding"
+                    android:id="@+id/detailPopularityContent" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Release Date: "
+                    android:padding="@dimen/table_text_padding"
+
+                    android:id="@+id/detailDateLabel" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/table_text_padding"
+
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/detailDateContent" />
+            </TableRow>
+        </TableLayout>
+
+        <ToggleButton
+            android:button="@android:drawable/btn_star"
+            android:background="@android:color/transparent"
+            android:textOn="Unmark As Favorite"
+            android:textOff="Mark As Favorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="2dp"
+            android:clickable="true"
+            android:checked="false"
+            android:id="@+id/faveToggle"
+            android:enabled="true" />
+    </LinearLayout>
+
+    <View
+        android:background="#ffffff"
+        android:layout_width = "fill_parent"
+        android:layout_height="1dp"
+        android:layout_centerVertical ="true"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:id="@+id/detailTrailersHeading"
+        android:text="Clips"
+        android:visibility="gone"
+        android:paddingTop="@dimen/table_text_padding"
+        android:paddingBottom="@dimen/table_text_padding" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailTrailersTable"
+        android:visibility="gone"
+        android:paddingBottom="@dimen/table_text_padding"
+        android:shrinkColumns="1">
+        </TableLayout>
+
+    <View
+        android:background="#ffffff"
+        android:layout_width = "fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/detailTrailersLine"
+        android:visibility="gone"
+        android:layout_centerVertical ="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:id="@+id/detailReviewsHeading"
+        android:text="Reviews"
+        android:visibility="gone"
+        android:paddingTop="@dimen/table_text_padding"
+        android:paddingBottom="@dimen/table_text_padding" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailReviewsTable"
+        android:visibility="gone"
+        android:paddingBottom="@dimen/table_text_padding"
+        android:shrinkColumns="1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:padding="@dimen/table_text_padding"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Author"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:padding="@dimen/table_text_padding"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Comments"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:padding="@dimen/table_text_padding"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="More"/>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

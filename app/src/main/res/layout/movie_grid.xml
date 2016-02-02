@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_grid"
+    android:name="com.example.brandnewpeterson.projecttwo.MovieListFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutManager="GridLayoutManager"
+    app:spanCount="2"
+    tools:context=".MovieGridActivity"
+    tools:listitem="@layout/movie_grid_content" />
