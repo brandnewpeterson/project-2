@@ -1,16 +1,12 @@
-package com.example.brandnewpeterson.projecttwo;
+package com.example.brandnewpeterson.projecttwo.unused;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import org.json.JSONArray;
-import org.json.JSONException;
+import com.example.brandnewpeterson.projecttwo.R;
 
 public class PlayerActivity extends AppCompatActivity {
     private String API_KEY;

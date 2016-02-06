@@ -1,10 +1,7 @@
-package com.example.brandnewpeterson.projecttwo;
+package com.example.brandnewpeterson.projecttwo.models;
 
-import android.graphics.Bitmap;
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import org.json.JSONObject;
 
 /**
  * Created by brandnewpeterson on 1/26/16.
